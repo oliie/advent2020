@@ -2,10 +2,14 @@
  * https://adventofcode.com/2020/day/2
  */
 
-import puzzle from './puzzle.ts';
+import input from './puzzle.ts';
 
-const part1 = () => {
-    let lines = puzzle.split(/\n/);
+const example = `1-3 a: abcde
+1-3 b: cdefg
+2-9 c: ccccccccc`;
+
+const part1 = (data: string) => {
+    let lines = data.split(/\n/);
     let validPasswords = 0;
 
     lines.forEach((line) => {
@@ -24,8 +28,8 @@ const part1 = () => {
     console.log(`Part 1: ${validPasswords}`);
 };
 
-const part2 = () => {
-    let lines = puzzle.split(/\n/);
+const part2 = (data: string) => {
+    let lines = data.split(/\n/);
     let validPasswords = 0;
 
     lines.forEach((line) => {
@@ -50,5 +54,5 @@ const part2 = () => {
     console.log(`Part 2: ${validPasswords}`);
 };
 
-part1();
-part2();
+part1(input);
+part2(input);
